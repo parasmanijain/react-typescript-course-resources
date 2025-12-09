@@ -1,15 +1,15 @@
-import CourseGoal from './CourseGoal.tsx';
-import { type CourseGoal as CGoal } from '../App.tsx';
+import { type CourseGoal as CGoal } from "../App.tsx";
+import { CourseGoal } from "./CourseGoal.tsx";
 
 type CourseGoalListProps = {
   goals: CGoal[];
   onDeleteGoal: (id: number) => void;
 };
 
-export default function CourseGoalList({
+export const CourseGoalList = ({
   goals,
   onDeleteGoal,
-}: CourseGoalListProps) {
+}: CourseGoalListProps) => {
   return (
     <ul>
       {goals.map((goal) => (
@@ -21,4 +21,4 @@ export default function CourseGoalList({
       ))}
     </ul>
   );
-}
+};
