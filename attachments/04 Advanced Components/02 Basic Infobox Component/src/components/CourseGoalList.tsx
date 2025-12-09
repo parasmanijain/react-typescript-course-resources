@@ -1,18 +1,17 @@
-import { type ReactNode } from 'react';
-
-import CourseGoal from './CourseGoal.tsx';
-import { type CourseGoal as CGoal } from '../App.tsx';
-import InfoBox from './InfoBox.tsx';
+import { type ReactNode } from "react";
+import { type CourseGoal as CGoal } from "../App.tsx";
+import { InfoBox } from "./InfoBox.tsx";
+import { CourseGoal } from "./CourseGoal.tsx";
 
 type CourseGoalListProps = {
   goals: CGoal[];
   onDeleteGoal: (id: number) => void;
 };
 
-export const CourseGoalList({
+export const CourseGoalList = ({
   goals,
   onDeleteGoal,
-}: CourseGoalListProps) {
+}: CourseGoalListProps) => {
   if (goals.length === 0) {
     return (
       <InfoBox mode="hint">
@@ -45,4 +44,4 @@ export const CourseGoalList({
       </ul>
     </>
   );
-}
+};

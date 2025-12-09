@@ -1,12 +1,12 @@
-import { type ReactNode } from 'react';
+import { type ReactNode } from "react";
 
 type InfoBoxProps = {
-  mode: 'hint' | 'warning';
+  mode: "hint" | "warning";
   children: ReactNode;
 };
 
-export const InfoBox({ mode, children }: InfoBoxProps) {
-  if (mode === 'hint') {
+export const InfoBox = ({ mode, children }: InfoBoxProps) => {
+  if (mode === "hint") {
     return (
       <aside className="infobox infobox-hint">
         <p>{children}</p>
@@ -20,4 +20,4 @@ export const InfoBox({ mode, children }: InfoBoxProps) {
       <p>{children}</p>
     </aside>
   );
-}
+};
