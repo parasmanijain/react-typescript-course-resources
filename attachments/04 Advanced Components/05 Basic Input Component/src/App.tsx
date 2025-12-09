@@ -1,6 +1,6 @@
-import Input from './components/Input.tsx';
+import { Input } from "./components/Input";
 
-function App=() => {
+export const App = () => {
   return (
     <main>
       <Input id="name" label="Your name" />
@@ -8,5 +8,3 @@ function App=() => {
     </main>
   );
 }
-
-export default App;
