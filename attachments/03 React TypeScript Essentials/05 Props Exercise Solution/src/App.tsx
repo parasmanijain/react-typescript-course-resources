@@ -1,11 +1,11 @@
-import CourseGoal from './components/CourseGoal.tsx';
-import Header from './components/Header.tsx';
-import goalsImg from './assets/goals.jpg';
+import { CourseGoal } from "./components/CourseGoal";
+import { Header } from "./components/Header";
+import goalsImg from "./assets/goals.jpg";
 
-export default function App() {
+export const App = () => {
   return (
     <main>
-      <Header image={{ src: goalsImg, alt: 'A list of goals' }}>
+      <Header image={{ src: goalsImg, alt: "A list of goals" }}>
         <h1>Your Course Goals</h1>
       </Header>
       <CourseGoal title="Learn React + TS">
@@ -13,4 +13,4 @@ export default function App() {
       </CourseGoal>
     </main>
   );
-}
+};
