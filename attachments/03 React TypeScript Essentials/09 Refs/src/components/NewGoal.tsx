@@ -1,10 +1,10 @@
-import { useRef, type FormEvent } from 'react';
+import { useRef, type FormEvent } from "react";
 
 type NewGoalProps = {
   onAddGoal: (goal: string, summary: string) => void;
 };
 
-export default function NewGoal({ onAddGoal }: NewGoalProps) {
+export const NewGoal = ({ onAddGoal }: NewGoalProps) => {
   const goal = useRef<HTMLInputElement>(null);
   const summary = useRef<HTMLInputElement>(null);
 
@@ -33,4 +33,4 @@ export default function NewGoal({ onAddGoal }: NewGoalProps) {
       </p>
     </form>
   );
-}
+};
