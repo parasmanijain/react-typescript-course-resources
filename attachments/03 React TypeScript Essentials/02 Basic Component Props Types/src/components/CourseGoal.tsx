@@ -1,10 +1,10 @@
-export default function CourseGoal({
+export const CourseGoal = ({
   title,
   description,
 }: {
   title: string;
   description: string;
-}) {
+}) => {
   return (
     <article>
       <div>
@@ -14,4 +14,4 @@ export default function CourseGoal({
       <button>Delete</button>
     </article>
   );
-}
+};

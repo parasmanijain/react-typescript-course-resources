@@ -1,3 +1,3 @@
-export default function App() {
+export const App = () => {
   return <h1>Let's get started!</h1>;
-}
+};
