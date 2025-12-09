@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from 'react';
+import { type PropsWithChildren } from "react";
 
 // interface CourseGoalProps {
 //   title: string;
@@ -11,12 +11,12 @@ type CourseGoalProps = PropsWithChildren<{
   onDelete: (id: number) => void;
 }>;
 
-export default function CourseGoal({
+export const CourseGoal = ({
   title,
   id,
   children,
   onDelete,
-}: CourseGoalProps) {
+}: CourseGoalProps) => {
   return (
     <article>
       <div>
@@ -26,7 +26,7 @@ export default function CourseGoal({
       <button onClick={() => onDelete(id)}>Delete</button>
     </article>
   );
-}
+};
 
 // const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
 //   return (

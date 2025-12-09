@@ -1,6 +1,6 @@
-import { type FormEvent } from 'react';
+import { type FormEvent } from "react";
 
-export default function NewGoal() {
+export const NewGoal = () => {
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
   }
@@ -20,4 +20,4 @@ export default function NewGoal() {
       </p>
     </form>
   );
-}
+};
