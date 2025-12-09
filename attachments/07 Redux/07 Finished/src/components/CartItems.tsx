@@ -5,7 +5,7 @@ import {
 } from '../store/cart-slice.ts';
 import { useCartDispatch, useCartSelector } from '../store/hooks.ts';
 
-export default function CartItems() {
+export const CartItems() {
   const cartItems = useCartSelector((state) => state.cart.items);
   const dispatch = useCartDispatch();
 

@@ -5,7 +5,7 @@ import { SESSIONS } from '../dummy-sessions.ts';
 import Button from '../components/UI/Button.tsx';
 import BookSession from '../components/Sessions/BookSession.tsx';
 
-export default function SessionPage() {
+export const SessionPage() {
   const params = useParams<{ id: string }>();
   const [isBooking, setIsBooking] = useState(false);
 

@@ -9,7 +9,7 @@ type ProductProps = {
   description: string;
 };
 
-export default function Product({
+export const Product({
   id,
   image,
   title,

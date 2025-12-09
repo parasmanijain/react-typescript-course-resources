@@ -7,7 +7,7 @@ type SessionItemProps = {
   image: string;
 };
 
-export default function SessionItem({
+export const SessionItem({
   image,
   title,
   summary,

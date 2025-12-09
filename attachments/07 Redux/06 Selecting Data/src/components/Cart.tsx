@@ -6,7 +6,7 @@ type CartProps = {
   onClose: () => void;
 };
 
-export default function Cart({ onClose }: CartProps) {
+export const Cart({ onClose }: CartProps) {
   return createPortal(
     <>
       <div className="cart-backdrop" />

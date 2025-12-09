@@ -6,13 +6,13 @@ type ProductProps = {
   description: string;
 };
 
-export default function Product({
+export const Product({
   image,
   title,
   price,
   description,
 }: ProductProps) {
-  function handleAddToCart() {}
+  function handleAddToCart() { }
 
   return (
     <article className="product">

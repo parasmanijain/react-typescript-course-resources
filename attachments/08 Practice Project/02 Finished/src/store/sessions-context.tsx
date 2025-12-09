@@ -66,7 +66,7 @@ function sessionsReducer(state: SessionState, action: SessionsAction) {
   return state;
 }
 
-export default function SessionsContextProvider({ children }: {children: ReactNode}) {
+export const SessionsContextProvider({ children }: { children: ReactNode }) {
   const [sessionsState, dispatch] = useReducer(sessionsReducer, {
     upcomingSessions: [],
   });

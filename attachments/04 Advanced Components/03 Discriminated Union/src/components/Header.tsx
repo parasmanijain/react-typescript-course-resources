@@ -8,7 +8,7 @@ type HeaderProps = {
   children: ReactNode
 };
 
-export default function Header({image, children}: HeaderProps) {
+export const Header({ image, children }: HeaderProps) {
   return (
     <header>
       <img {...image} />

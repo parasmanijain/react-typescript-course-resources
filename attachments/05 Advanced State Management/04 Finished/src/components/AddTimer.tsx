@@ -5,7 +5,7 @@ import Form, { FormHandle } from './UI/Form.tsx';
 import Input from './UI/Input.tsx';
 import { useTimersContext } from '../store/timers-context.tsx';
 
-export default function AddTimer() {
+export const AddTimer() {
   const form = useRef<FormHandle>(null);
   const { addTimer } = useTimersContext();
 

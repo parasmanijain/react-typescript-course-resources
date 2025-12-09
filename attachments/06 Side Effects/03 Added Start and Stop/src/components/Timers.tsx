@@ -1,7 +1,7 @@
 import { useTimersContext } from '../store/timers-context.tsx';
 import Timer from './Timer.tsx';
 
-export default function Timers() {
+export const Timers() {
   const { timers } = useTimersContext();
   return (
     <ul>

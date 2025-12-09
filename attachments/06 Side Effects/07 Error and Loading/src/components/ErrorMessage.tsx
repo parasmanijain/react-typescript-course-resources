@@ -2,7 +2,7 @@ type ErrorMessageProps = {
   text: string,
 };
 
-export default function ErrorMessage({ text }: ErrorMessageProps) {
+export const ErrorMessage({ text }: ErrorMessageProps) {
   return (
     <aside id="error">
       <h1>An error occurred!</h1>

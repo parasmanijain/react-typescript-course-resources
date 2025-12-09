@@ -1,6 +1,6 @@
 import Container from './UI/Container.tsx';
 
-export default function Timer() {
+export const Timer() {
   return (
     <Container as="article">
       <h2>TODO: TIMER NAME</h2>

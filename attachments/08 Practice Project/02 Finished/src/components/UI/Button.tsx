@@ -20,7 +20,7 @@ function isRouterLink(
   return 'to' in props;
 }
 
-export default function Button(props: ButtonProps | ButtonLinkProps) {
+export const Button(props: ButtonProps | ButtonLinkProps) {
   if (isRouterLink(props)) {
     // Destructuring inside the `if` statement to ensure TypeScript "understands" that `props` is of type `ButtonLinkProps` and `otherProps` will therefore only contain props that work on <Link>
     const { children, textOnly, ...otherProps } = props;

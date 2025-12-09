@@ -4,7 +4,7 @@ type ContainerProps = {
   as: ElementType
 };
 
-export default function Container({as}: ContainerProps) {
+export const Container({ as }: ContainerProps) {
   const Component = as;
   return <Component />
 }

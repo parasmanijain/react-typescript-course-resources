@@ -10,7 +10,7 @@ type UpcomingSessionProps = {
   onCancel: () => void;
 };
 
-export default function UpcomingSession({
+export const UpcomingSession({
   session,
   onCancel,
 }: UpcomingSessionProps) {

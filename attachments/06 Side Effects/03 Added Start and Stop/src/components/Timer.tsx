@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import Container from './UI/Container.tsx';
 import { useTimersContext, type Timer as TimerProps } from '../store/timers-context.tsx';
 
-export default function Timer({ name, duration }: TimerProps) {
+export const Timer({ name, duration }: TimerProps) {
   const interval = useRef<number | null>(null);
   const [remainingTime, setRemainingTime] = useState(duration * 1000);
   const { isRunning } = useTimersContext();
@@ -14,7 +14,7 @@ export default function Timer({ name, duration }: TimerProps) {
 
   useEffect(() => {
     let timer: number;
-    
+
     if (isRunning) {
       timer = setInterval(function () {
         setRemainingTime((prevTime) => prevTime - 50);

@@ -8,7 +8,7 @@ type BlogPostsProps = {
   posts: BlogPost[];
 };
 
-export default function BlogPosts({ posts }: BlogPostsProps) {
+export const BlogPosts({ posts }: BlogPostsProps) {
   return (
     <div id="blog-posts">
       <h1>Blog Posts</h1>

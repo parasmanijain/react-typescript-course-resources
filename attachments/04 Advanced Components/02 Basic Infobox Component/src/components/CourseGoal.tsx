@@ -11,7 +11,7 @@ type CourseGoalProps = PropsWithChildren<{
   onDelete: (id: number) => void;
 }>;
 
-export default function CourseGoal({
+export const CourseGoal({
   title,
   id,
   children,

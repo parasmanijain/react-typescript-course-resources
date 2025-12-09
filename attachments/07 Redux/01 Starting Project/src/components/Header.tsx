@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Cart from './Cart.tsx';
 
-export default function Header() {
+export const Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
   function handleOpenCartClick() {

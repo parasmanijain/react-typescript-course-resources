@@ -9,7 +9,7 @@ type UpcomingSessionsProps = {
   onClose: () => void; // onClose is accepted to "tell" the parent component that the UpcomingSessions component should be removed from the DOM
 };
 
-export default function UpcomingSessions({ onClose }: UpcomingSessionsProps) {
+export const UpcomingSessions({ onClose }: UpcomingSessionsProps) {
   const modal = useRef<ModalHandle>(null);
   const sessionsCtx = useSessionsContext();
 

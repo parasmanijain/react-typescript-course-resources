@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Cart from './Cart.tsx';
 import { useCartSelector } from '../store/hooks.ts';
 
-export default function Header() {
+export const Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
   const cartQuantity = useCartSelector((state) =>
     state.cart.items.reduce((val, item) => val + item.quantity, 0)

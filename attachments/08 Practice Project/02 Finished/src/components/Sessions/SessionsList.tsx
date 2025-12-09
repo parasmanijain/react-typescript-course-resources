@@ -9,7 +9,7 @@ type SessionsListProps = {
   }[];
 };
 
-export default function SessionsList({ sessions }: SessionsListProps) {
+export const SessionsList({ sessions }: SessionsListProps) {
   return (
     <ul id="sessions-list">
       {sessions.map((session) => (

@@ -6,7 +6,7 @@ type InputProps = {
   id: string;
 } & ComponentPropsWithoutRef<'input'>;
 
-export default function Input({ label, id, ...props }: InputProps) {
+export const Input({ label, id, ...props }: InputProps) {
   return (
     <div className="control">
       <label htmlFor={id}>{label}</label>

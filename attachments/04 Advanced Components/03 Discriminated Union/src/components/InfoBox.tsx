@@ -13,7 +13,7 @@ type WarningBoxProps = {
 
 type InfoBoxProps = HintBoxProps | WarningBoxProps;
 
-export default function InfoBox(props: InfoBoxProps) {
+export const InfoBox(props: InfoBoxProps) {
   const { children, mode } = props;
 
   if (mode === 'hint') {

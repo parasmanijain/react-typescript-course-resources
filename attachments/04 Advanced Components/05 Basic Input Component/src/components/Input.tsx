@@ -3,7 +3,7 @@ type InputProps = {
   id: string;
 }
 
-export default function Input({label, id}: InputProps) {
+export const Input({ label, id }: InputProps) {
   return (
     <p>
       <label htmlFor={id}>{label}</label>

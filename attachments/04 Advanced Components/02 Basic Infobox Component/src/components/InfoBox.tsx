@@ -5,7 +5,7 @@ type InfoBoxProps = {
   children: ReactNode;
 };
 
-export default function InfoBox({ mode, children }: InfoBoxProps) {
+export const InfoBox({ mode, children }: InfoBoxProps) {
   if (mode === 'hint') {
     return (
       <aside className="infobox infobox-hint">

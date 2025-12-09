@@ -1,6 +1,6 @@
 import Button from './UI/Button.tsx';
 
-export default function Header() {
+export const Header() {
   return (
     <header>
       <h1>ReactTimer</h1>

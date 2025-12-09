@@ -9,7 +9,7 @@ type CourseGoalListProps = {
   onDeleteGoal: (id: number) => void;
 };
 
-export default function CourseGoalList({
+export const CourseGoalList({
   goals,
   onDeleteGoal,
 }: CourseGoalListProps) {

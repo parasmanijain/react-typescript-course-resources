@@ -82,7 +82,7 @@ function timersReducer(state: TimersState, action: Action): TimersState {
   return state;
 }
 
-export default function TimersContextProvider({
+export const TimersContextProvider({
   children,
 }: TimersContextProviderProps) {
   const [timersState, dispatch] = useReducer(timersReducer, initialState);
