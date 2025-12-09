@@ -1,22 +1,22 @@
-import { type ReactNode } from 'react';
+import { type ReactNode } from "react";
 
 type HintBoxProps = {
-  mode: 'hint';
+  mode: "hint";
   children: ReactNode;
 };
 
 type WarningBoxProps = {
-  mode: 'warning';
-  severity: 'low' | 'medium' | 'high';
+  mode: "warning";
+  severity: "low" | "medium" | "high";
   children: ReactNode;
 };
 
 type InfoBoxProps = HintBoxProps | WarningBoxProps;
 
-export const InfoBox(props: InfoBoxProps) {
+export const InfoBox = (props: InfoBoxProps) => {
   const { children, mode } = props;
 
-  if (mode === 'hint') {
+  if (mode === "hint") {
     return (
       <aside className="infobox infobox-hint">
         <p>{children}</p>
@@ -32,4 +32,4 @@ export const InfoBox(props: InfoBoxProps) {
       <p>{children}</p>
     </aside>
   );
-}
+};

@@ -11,7 +11,7 @@ type RawDataBlogPost = {
   body: string;
 };
 
-function App() {
+function App=() => {
   const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>();
 
   useEffect(() => {

@@ -20,7 +20,7 @@ const Router = createBrowserRouter([
   },
 ]);
 
-function App() {
+function App=() => {
   return <RouterProvider router={Router} />;
 }
 

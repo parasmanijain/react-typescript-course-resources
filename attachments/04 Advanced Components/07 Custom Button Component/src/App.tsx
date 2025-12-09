@@ -1,6 +1,6 @@
 import Button from './components/Button.tsx';
 
-function App() {
+function App=() => {
   return (
     <main>
       <p>

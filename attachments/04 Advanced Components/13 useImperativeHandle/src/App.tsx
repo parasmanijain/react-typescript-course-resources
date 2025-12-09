@@ -4,7 +4,7 @@ import Input from './components/Input.tsx';
 import Form, { type FormHandle } from './components/Form.tsx';
 import Button from './components/Button.tsx';
 
-function App() {
+function App=() => {
   const customForm = useRef<FormHandle>(null);
 
   function handleSave(data: unknown) {

@@ -3,7 +3,7 @@ import Header from './components/Header.tsx';
 import Timers from './components/Timers.tsx';
 import TimersContextProvider from './store/timers-context.tsx';
 
-function App() {
+function App=() => {
   return (
     <TimersContextProvider>
       <Header />

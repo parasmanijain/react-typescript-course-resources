@@ -4,7 +4,7 @@ import Input from './components/Input.tsx';
 import Form from './components/Form.tsx';
 import Button from './components/Button.tsx';
 
-function App() {
+function App=() => {
   function handleSave(data: unknown) {
     const extractedData = data as { name: string; age: string };
     console.log(extractedData);

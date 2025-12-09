@@ -1,7 +1,7 @@
 import Button from './components/Button.tsx';
 import Container from './components/Container.tsx';
 
-function App() {
+function App=() => {
   return (
     <main>
       <Container as={Button} />

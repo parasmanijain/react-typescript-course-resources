@@ -1,6 +1,6 @@
 import Input from './components/Input.tsx';
 
-function App() {
+function App=() => {
   return (
     <main>
       <Input id="name" label="Your name" />

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import Input from './components/Input.tsx';
 
-function App() {
+function App=() => {
   const input = useRef<HTMLInputElement>(null);
 
   return (

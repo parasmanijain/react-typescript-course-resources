@@ -3,7 +3,7 @@ import Shop from './components/Shop.tsx';
 import Product from './components/Product.tsx';
 import { DUMMY_PRODUCTS } from './dummy-products.ts';
 
-function App() {
+function App=() => {
   return (
     <>
       <Header />

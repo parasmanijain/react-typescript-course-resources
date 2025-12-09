@@ -12,7 +12,7 @@ type RawDataBlogPost = {
   body: string;
 };
 
-function App() {
+function App=() => {
   const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>();
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState<string>();
