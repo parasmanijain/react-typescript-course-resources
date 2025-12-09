@@ -1,7 +1,7 @@
-let userName = 'Max';
+let userName = "Max";
 
 // userName = 34;
-userName = 'Max';
+userName = "Max";
 
 let userAge = 34;
 
@@ -11,7 +11,7 @@ let isValid = true;
 
 type StringOrNum = string | number;
 
-let userID: StringOrNum = 'abc1';
+let userID: StringOrNum = "abc1";
 userID = 123;
 
 // userID = true;
@@ -29,10 +29,10 @@ let user: User;
 // user = 'Max';
 
 user = {
-  name: 'Max',
+  name: "Max",
   age: 34,
   isAdmin: true,
-  id: 'abc', // 123
+  id: "abc", // 123
 };
 
 // user = {};
@@ -42,7 +42,7 @@ let hobbies: string[]; // number[], boolean[]
 
 // {name: string; age: number}[]
 
-hobbies = ['Sports', 'Cooking', 'Reading'];
+hobbies = ["Sports", "Cooking", "Reading"];
 // hobbies = [1, 2, 3];
 
 function add(a: number, b: number) {
@@ -70,8 +70,8 @@ interface Credentials {
 let creds: Credentials;
 
 creds = {
-  password: 'abc',
-  email: 'test@example.com',
+  password: "abc",
+  email: "test@example.com",
 };
 
 class AuthCredentials implements Credentials {
@@ -114,27 +114,27 @@ interface AppAdmin extends Admin, AppUser {}
 let admin: AppAdmin;
 
 admin = {
-  permissions: ['login'],
-  userName: 'Max',
+  permissions: ["login"],
+  userName: "Max",
 };
 
-type Role = 'admin' | 'user' | 'editor';
+type Role = "admin" | "user" | "editor";
 
 let role: Role; // 'admin', 'user', 'editor'
 
-role = 'admin';
-role = 'user';
-role = 'editor';
+role = "admin";
+role = "user";
+role = "editor";
 // role = 'abc';
 
 function performAction(action: string | number, role: Role) {
-  if (role === 'admin' && typeof action === 'string') {
+  if (role === "admin" && typeof action === "string") {
     // ...
   }
 }
 
 let roles: Array<Role>;
-roles = ['admin', 'editor'];
+roles = ["admin", "editor"];
 
 type DataStorage<T> = {
   storage: T[];
@@ -160,7 +160,4 @@ function merge<T, U>(a: T, b: U) {
   };
 }
 
-const newUser = merge(
-  { name: 'Max' },
-  { age: 34 }
-);
+const newUser = merge({ name: "Max" }, { age: 34 });

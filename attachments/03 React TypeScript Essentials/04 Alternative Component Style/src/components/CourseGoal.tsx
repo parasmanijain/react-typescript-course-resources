@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from 'react';
+import { type PropsWithChildren } from "react";
 
 // interface CourseGoalProps {
 //   title: string;
@@ -7,7 +7,7 @@ import { type PropsWithChildren } from 'react';
 
 type CourseGoalProps = PropsWithChildren<{ title: string }>;
 
-export default function CourseGoal({ title, children }: CourseGoalProps) {
+export const CourseGoal = ({ title, children }: CourseGoalProps) => {
   return (
     <article>
       <div>
@@ -17,7 +17,7 @@ export default function CourseGoal({ title, children }: CourseGoalProps) {
       <button>Delete</button>
     </article>
   );
-}
+};
 
 // const CourseGoal: FC<CourseGoalProps> = ({ title, children }) => {
 //   return (

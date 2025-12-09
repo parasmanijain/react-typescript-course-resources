@@ -1,6 +1,6 @@
-import CourseGoal from './components/CourseGoal.tsx';
+import { CourseGoal } from "./components/CourseGoal.tsx";
 
-export default function App() {
+export const App = () => {
   return (
     <main>
       <CourseGoal title="Learn React + TS">
@@ -8,4 +8,4 @@ export default function App() {
       </CourseGoal>
     </main>
   );
-}
+};
