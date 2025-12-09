@@ -1,18 +1,18 @@
-import { type ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = {
-  el: 'button';
-} & ComponentPropsWithoutRef<'button'>;
+  el: "button";
+} & ComponentPropsWithoutRef<"button">;
 
 type AnchorProps = {
-  el: 'anchor';
-} & ComponentPropsWithoutRef<'a'>;
+  el: "anchor";
+} & ComponentPropsWithoutRef<"a">;
 
-export const Button(props: ButtonProps | AnchorProps) {
+export const Button = (props: ButtonProps | AnchorProps) => {
   // const {el, ...otherProps} = props;
-  if (props.el === 'anchor') {
+  if (props.el === "anchor") {
     return <a className="button" {...props}></a>;
   }
 
   return <button className="button" {...props}></button>;
-}
+};
