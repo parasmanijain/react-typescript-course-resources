@@ -1,6 +1,6 @@
-import Button from './components/Button.tsx';
+import { Button } from "./components/Button";
 
-function App=() => {
+export const App = () => {
   return (
     <main>
       <p>
@@ -12,5 +12,3 @@ function App=() => {
     </main>
   );
 }
-
-export default App;
