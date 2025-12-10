@@ -1,9 +1,9 @@
-import AddTimer from './components/AddTimer.tsx';
-import Header from './components/Header.tsx';
-import Timers from './components/Timers.tsx';
-import TimersContextProvider from './store/timers-context.tsx';
+import { AddTimer } from "./components/AddTimer.tsx";
+import { Header } from "./components/Header.tsx";
+import { Timers } from "./components/Timers.tsx";
+import { TimersContextProvider } from "./store/timers-context.tsx";
 
-function App=() => {
+export const App = () => {
   return (
     <TimersContextProvider>
       <Header />
@@ -13,6 +13,4 @@ function App=() => {
       </main>
     </TimersContextProvider>
   );
-}
-
-export default App;
+};

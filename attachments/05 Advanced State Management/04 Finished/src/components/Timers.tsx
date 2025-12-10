@@ -1,7 +1,7 @@
-import { useTimersContext } from '../store/timers-context.tsx';
-import Timer from './Timer.tsx';
+import { useTimersContext } from "../store/timers-context.tsx";
+import { Timer } from "./Timer.tsx";
 
-export const Timers() {
+export const Timers = () => {
   const { timers } = useTimersContext();
   return (
     <ul>
@@ -12,4 +12,4 @@ export const Timers() {
       ))}
     </ul>
   );
-}
+};

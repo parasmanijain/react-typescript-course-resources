@@ -1,7 +1,7 @@
-import Button from './UI/Button.tsx';
-import { useTimersContext } from '../store/timers-context.tsx';
+import { Button } from "./UI/Button.tsx";
+import { useTimersContext } from "../store/timers-context.tsx";
 
-export const Header() {
+export const Header = () => {
   const timersCtx = useTimersContext();
 
   return (
@@ -13,8 +13,8 @@ export const Header() {
           timersCtx.isRunning ? timersCtx.stopTimers : timersCtx.startTimers
         }
       >
-        {timersCtx.isRunning ? 'Stop' : 'Start'} Timers
+        {timersCtx.isRunning ? "Stop" : "Start"} Timers
       </Button>
     </header>
   );
-}
+};
