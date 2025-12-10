@@ -1,10 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-export const Root() {
+export const Root = () => {
   return (
     <>
       {/* Todo: Add Header */}
       <Outlet />
     </>
   );
-}
+};

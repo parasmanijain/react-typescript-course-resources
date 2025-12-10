@@ -1,6 +1,4 @@
-import { SESSIONS } from '../dummy-sessions.ts'; // normally, we would probably load that from a server
-
-export const SessionsPage() {
+export const SessionsPage = () => {
   return (
     <main id="sessions-page">
       <header>
