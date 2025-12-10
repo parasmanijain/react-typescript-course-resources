@@ -1,10 +1,9 @@
-import { useRef } from 'react';
+import { useRef } from "react";
+import { Input } from "./components/Input.tsx";
+import { Form, type FormHandle } from "./components/Form.tsx";
+import { Button } from "./components/Button.tsx";
 
-import Input from './components/Input.tsx';
-import Form, { type FormHandle } from './components/Form.tsx';
-import Button from './components/Button.tsx';
-
-function App=() => {
+export const App = () => {
   const customForm = useRef<FormHandle>(null);
 
   function handleSave(data: unknown) {
@@ -24,6 +23,4 @@ function App=() => {
       </Form>
     </main>
   );
-}
-
-export default App;
+};
