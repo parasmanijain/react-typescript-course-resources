@@ -1,6 +1,6 @@
 
 
-import App from './App.tsx'
+import { App } from './App.tsx'
 import './index.scss'
 
 createRoot(document.getElementById('root')!).render(

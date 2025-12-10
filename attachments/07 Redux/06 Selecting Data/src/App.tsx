@@ -6,7 +6,7 @@ import Product from './components/Product.tsx';
 import { DUMMY_PRODUCTS } from './dummy-products.ts';
 import { store } from './store/store.ts';
 
-function App=() => {
+export const App = () => {
   return (
     <Provider store={store}>
       <Header />
@@ -21,4 +21,4 @@ function App=() => {
   );
 }
 
-export default App;
+
