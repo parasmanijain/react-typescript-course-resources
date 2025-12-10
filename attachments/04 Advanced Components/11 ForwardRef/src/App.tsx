@@ -1,8 +1,8 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import Input from './components/Input.tsx';
+import { Input } from "./components/Input.tsx";
 
-function App=() => {
+export const App = () => {
   const input = useRef<HTMLInputElement>(null);
 
   return (
@@ -10,6 +10,4 @@ function App=() => {
       <Input label="Test" id="test" ref={input} />
     </main>
   );
-}
-
-export default App;
+};

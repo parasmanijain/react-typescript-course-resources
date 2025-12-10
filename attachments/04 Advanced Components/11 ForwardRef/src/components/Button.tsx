@@ -12,7 +12,7 @@ function isAnchorProps(props: ButtonProps | AnchorProps): props is AnchorProps {
   return 'href' in props;
 }
 
-export const Button(props: ButtonProps | AnchorProps) {
+export const Button = (props: ButtonProps | AnchorProps) => {
   if (isAnchorProps(props)) {
     return <a className="button" {...props}></a>;
   }
