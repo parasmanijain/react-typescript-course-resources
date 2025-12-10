@@ -1,6 +1,6 @@
-import Button from './UI/Button.tsx';
+import { Button } from "./UI/Button.tsx";
 
-export const Header() {
+export const Header = () => {
   return (
     <header>
       <h1>ReactTimer</h1>
@@ -8,4 +8,4 @@ export const Header() {
       <Button>Stop Timers</Button>
     </header>
   );
-}
+};

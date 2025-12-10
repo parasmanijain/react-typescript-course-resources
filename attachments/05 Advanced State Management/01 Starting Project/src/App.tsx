@@ -1,8 +1,8 @@
-import AddTimer from './components/AddTimer.tsx';
-import Header from './components/Header.tsx';
-import Timers from './components/Timers.tsx';
+import { AddTimer } from "./components/AddTimer.tsx";
+import { Header } from "./components/Header.tsx";
+import { Timers } from "./components/Timers.tsx";
 
-function App=() => {
+export const App = () => {
   return (
     <>
       <Header />
@@ -12,6 +12,4 @@ function App=() => {
       </main>
     </>
   );
-}
-
-export default App;
+};
