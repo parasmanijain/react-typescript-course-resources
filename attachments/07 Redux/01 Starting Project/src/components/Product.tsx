@@ -6,12 +6,7 @@ type ProductProps = {
   description: string;
 };
 
-export const Product({
-  image,
-  title,
-  price,
-  description,
-}: ProductProps) {
+export const Product = ({ image, title, price, description }: ProductProps) => {
   function handleAddToCart() { }
 
   return (
@@ -29,4 +24,4 @@ export const Product({
       </div>
     </article>
   );
-}
+};
