@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
+import { Container } from "./UI/Container.tsx";
+import { type Timer as TimerProps } from "../store/timers-context.tsx";
 
-import Container from './UI/Container.tsx';
-import { type Timer as TimerProps } from '../store/timers-context.tsx';
-
-export const Timer({ name, duration }: TimerProps) {
+export const Timer = ({ name, duration }: TimerProps) => {
   const interval = useRef<number | null>(null);
   const [remainingTime, setRemainingTime] = useState(duration * 1000);
 
@@ -31,4 +30,4 @@ export const Timer({ name, duration }: TimerProps) {
       <p>{formattedRemainingTime}</p>
     </Container>
   );
-}
+};
