@@ -5,7 +5,7 @@ type InputProps = {
   id: string;
 } & ComponentPropsWithoutRef<'input'>;
 
-const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
+export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { label, id, ...props },
   ref
 ) {
@@ -16,5 +16,3 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     </p>
   );
 });
-
-export default Input;
