@@ -5,7 +5,7 @@ type InputProps = {
   id: string;
 } & ComponentPropsWithoutRef<'input'>;
 
-export const Input({ label, id, ...props }: InputProps) {
+export const Input = ({ label, id, ...props }: InputProps) => {
   return (
     <p>
       <label htmlFor={id}>{label}</label>
