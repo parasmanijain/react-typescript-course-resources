@@ -1,8 +1,8 @@
-import { type ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useEffect, useState } from "react";
 
-import BlogPosts, { BlogPost } from './components/BlogPosts.tsx';
-import { get } from './util/http.ts';
-import fetchingImg from './assets/data-fetching.png';
+import { BlogPosts, BlogPost } from "./components/BlogPosts.tsx";
+import { get } from "./util/http.ts";
+import fetchingImg from "./assets/data-fetching.png";
 
 type RawDataBlogPost = {
   id: number;
@@ -11,13 +11,13 @@ type RawDataBlogPost = {
   body: string;
 };
 
-function App=() => {
+export const App = () => {
   const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>();
 
   useEffect(() => {
     async function fetchPosts() {
       const data = (await get(
-        'https://jsonplaceholder.typicode.com/posts'
+        "https://jsonplaceholder.typicode.com/posts"
       )) as RawDataBlogPost[];
 
       const blogPosts: BlogPost[] = data.map((rawPost) => {
@@ -49,6 +49,4 @@ function App=() => {
       {content}
     </main>
   );
-}
-
-export default App;
+};
