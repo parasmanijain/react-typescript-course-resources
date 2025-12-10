@@ -1,12 +1,11 @@
-import { createPortal } from 'react-dom';
-
-import CartItems from './CartItems.tsx';
+import { createPortal } from "react-dom";
+import { CartItems } from "./CartItems.tsx";
 
 type CartProps = {
   onClose: () => void;
 };
 
-export const Cart({ onClose }: CartProps) {
+export const Cart = ({ onClose }: CartProps) => {
   return createPortal(
     <>
       <div className="cart-backdrop" />
@@ -18,6 +17,6 @@ export const Cart({ onClose }: CartProps) {
         </p>
       </dialog>
     </>,
-    document.getElementById('modal')!
+    document.getElementById("modal")!
   );
-}
+};

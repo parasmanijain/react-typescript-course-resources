@@ -1,4 +1,4 @@
-export const CartItems() {
+export const CartItems = () => {
   return (
     <div id="cart">
       <p>No items in cart!</p>
@@ -30,4 +30,4 @@ export const CartItems() {
       </p> */}
     </div>
   );
-}
+};

@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Cart } from "./Cart.tsx";
 
-import Cart from './Cart.tsx';
-
-export const Header() {
+export const Header = () => {
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
   function handleOpenCartClick() {
@@ -27,4 +26,4 @@ export const Header() {
       </header>
     </>
   );
-}
+};
