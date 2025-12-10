@@ -1,11 +1,10 @@
-import { useRef } from 'react';
+import { useRef } from "react";
+import { Button } from "./UI/Button.tsx";
+import { Form, FormHandle } from "./UI/Form.tsx";
+import { Input } from "./UI/Input.tsx";
+import { useTimersContext } from "../store/timers-context.tsx";
 
-import Button from './UI/Button.tsx';
-import Form, { FormHandle } from './UI/Form.tsx';
-import Input from './UI/Input.tsx';
-import { useTimersContext } from '../store/timers-context.tsx';
-
-export const AddTimer() {
+export const AddTimer = () => {
   const form = useRef<FormHandle>(null);
   const { addTimer } = useTimersContext();
 
@@ -24,4 +23,4 @@ export const AddTimer() {
       </p>
     </Form>
   );
-}
+};

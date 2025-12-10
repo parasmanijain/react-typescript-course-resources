@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
+import { Container } from "./UI/Container.tsx";
+import {
+  useTimersContext,
+  type Timer as TimerProps,
+} from "../store/timers-context.tsx";
 
-import Container from './UI/Container.tsx';
-import { useTimersContext, type Timer as TimerProps } from '../store/timers-context.tsx';
-
-export const Timer({ name, duration }: TimerProps) {
+export const Timer = ({ name, duration }: TimerProps) => {
   const interval = useRef<number | null>(null);
   const [remainingTime, setRemainingTime] = useState(duration * 1000);
   const { isRunning } = useTimersContext();
@@ -20,9 +22,8 @@ export const Timer({ name, duration }: TimerProps) {
         setRemainingTime((prevTime) => prevTime - 50);
       }, 50);
       interval.current = timer;
-
     } else if (interval.current) {
-      clearInterval(interval.current)
+      clearInterval(interval.current);
     }
 
     return () => clearInterval(timer);
@@ -39,4 +40,4 @@ export const Timer({ name, duration }: TimerProps) {
       <p>{formattedRemainingTime}</p>
     </Container>
   );
-}
+};
