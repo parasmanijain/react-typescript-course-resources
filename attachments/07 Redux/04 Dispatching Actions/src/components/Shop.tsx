@@ -1,10 +1,10 @@
-import { type ReactNode } from 'react';
+import { type ReactNode } from "react";
 
 type ShopProps = {
   children: ReactNode;
 };
 
-export const Shop({ children }: ShopProps) {
+export const Shop = ({ children }: ShopProps) => {
   return (
     <section id="shop">
       <h2>Elegant Clothing For Everyone</h2>
@@ -12,4 +12,4 @@ export const Shop({ children }: ShopProps) {
       <ul id="products">{children}</ul>
     </section>
   );
-}
+};
