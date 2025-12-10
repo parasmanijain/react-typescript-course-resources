@@ -1,10 +1,8 @@
-import { useRef } from 'react';
+import { Input } from "./components/Input.tsx";
+import { Form } from "./components/Form.tsx";
+import { Button } from "./components/Button.tsx";
 
-import Input from './components/Input.tsx';
-import Form from './components/Form.tsx';
-import Button from './components/Button.tsx';
-
-function App=() => {
+export const App = () => {
   function handleSave(data: unknown) {
     const extractedData = data as { name: string; age: string };
     console.log(extractedData);
@@ -21,6 +19,6 @@ function App=() => {
       </Form>
     </main>
   );
-}
+};
 
 export default App;

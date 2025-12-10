@@ -4,7 +4,7 @@ type FormProps = ComponentPropsWithoutRef<'form'> & {
   onSave: (value: unknown) => void;
 };
 
-export const Form({ onSave, children, ...otherProps }: FormProps) {
+export const Form = ({ onSave, children, ...otherProps }: FormProps) => {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
