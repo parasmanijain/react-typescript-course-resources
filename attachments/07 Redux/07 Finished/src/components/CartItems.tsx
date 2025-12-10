@@ -2,10 +2,10 @@ import {
   type CartItem,
   addToCart,
   removeFromCart,
-} from '../store/cart-slice.ts';
-import { useCartDispatch, useCartSelector } from '../store/hooks.ts';
+} from "../store/cart-slice.ts";
+import { useCartDispatch, useCartSelector } from "../store/hooks.ts";
 
-export const CartItems() {
+export const CartItems = () => {
   const cartItems = useCartSelector((state) => state.cart.items);
   const dispatch = useCartDispatch();
 
@@ -56,4 +56,4 @@ export const CartItems() {
       </p>
     </div>
   );
-}
+};

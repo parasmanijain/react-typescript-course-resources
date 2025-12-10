@@ -1,5 +1,5 @@
-import { addToCart } from '../store/cart-slice.ts';
-import { useCartDispatch } from '../store/hooks.ts';
+import { addToCart } from "../store/cart-slice.ts";
+import { useCartDispatch } from "../store/hooks.ts";
 
 type ProductProps = {
   id: string;
@@ -9,13 +9,13 @@ type ProductProps = {
   description: string;
 };
 
-export const Product({
+export const Product = ({
   id,
   image,
   title,
   price,
   description,
-}: ProductProps) {
+}: ProductProps) => {
   const dispatch = useCartDispatch();
 
   function handleAddToCart() {
@@ -37,4 +37,4 @@ export const Product({
       </div>
     </article>
   );
-}
+};
