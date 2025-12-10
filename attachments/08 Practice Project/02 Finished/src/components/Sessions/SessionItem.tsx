@@ -1,4 +1,4 @@
-import Button from '../UI/Button.tsx';
+import { Button } from "../UI/Button.tsx";
 
 type SessionItemProps = {
   id: string;
@@ -7,14 +7,14 @@ type SessionItemProps = {
   image: string;
 };
 
-export const SessionItem({
+export const SessionItem = ({
   image,
   title,
   summary,
   id,
-}: SessionItemProps) {
+}: SessionItemProps) => {
   return (
-    <article className='session-item'>
+    <article className="session-item">
       <img src={image} alt={title} />
       <div className="session-data">
         <div>
@@ -27,4 +27,4 @@ export const SessionItem({
       </div>
     </article>
   );
-}
+};

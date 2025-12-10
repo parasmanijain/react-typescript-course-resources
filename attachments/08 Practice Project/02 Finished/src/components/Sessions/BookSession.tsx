@@ -1,16 +1,15 @@
-import { FormEvent, useEffect, useRef } from 'react';
-
-import Modal, { ModalHandle } from '../UI/Modal.tsx';
-import Input from '../UI/Input.tsx';
-import Button from '../UI/Button.tsx';
-import { Session, useSessionsContext } from '../../store/sessions-context.tsx';
+import { FormEvent, useEffect, useRef } from "react";
+import { Modal, ModalHandle } from "../UI/Modal.tsx";
+import { Input } from "../UI/Input.tsx";
+import { Button } from "../UI/Button.tsx";
+import { Session, useSessionsContext } from "../../store/sessions-context.tsx";
 
 type BookSessionProps = {
   session: Session;
   onDone: () => void; // onDone will "tell" the parent component that the BookSession component should be removed from the DOM
 };
 
-export const BookSession({ session, onDone }: BookSessionProps) {
+export const BookSession = ({ session, onDone }: BookSessionProps) => {
   const modal = useRef<ModalHandle>(null);
   const sessionsCtx = useSessionsContext();
 
@@ -46,4 +45,4 @@ export const BookSession({ session, onDone }: BookSessionProps) {
       </form>
     </Modal>
   );
-}
+};

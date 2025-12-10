@@ -1,4 +1,4 @@
-import Button from '../UI/Button.tsx';
+import { Button } from "../UI/Button.tsx";
 
 type UpcomingSessionProps = {
   session: {
@@ -10,20 +10,20 @@ type UpcomingSessionProps = {
   onCancel: () => void;
 };
 
-export const UpcomingSession({
+export const UpcomingSession = ({
   session,
   onCancel,
-}: UpcomingSessionProps) {
+}: UpcomingSessionProps) => {
   return (
     <article className="upcoming-session">
       <div>
         <h3>{session.title}</h3>
         <p>{session.summary}</p>
         <time dateTime={new Date(session.date).toISOString()}>
-          {new Date(session.date).toLocaleDateString('en-US', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
+          {new Date(session.date).toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
           })}
         </time>
       </div>
@@ -34,4 +34,4 @@ export const UpcomingSession({
       </p>
     </article>
   );
-}
+};

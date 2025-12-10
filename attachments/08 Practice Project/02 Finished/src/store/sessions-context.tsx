@@ -1,4 +1,4 @@
-import { type ReactNode, createContext, useReducer, useContext } from 'react';
+import { type ReactNode, createContext, useReducer, useContext } from "react";
 
 export type Session = {
   id: string;
@@ -25,26 +25,26 @@ export function useSessionsContext() {
   const context = useContext(SessionsContext);
   if (!context) {
     throw new Error(
-      'useSessionsContext must be used within a SessionsContextProvider'
+      "useSessionsContext must be used within a SessionsContextProvider"
     );
   }
   return context;
 }
 
 type BookSessionAction = {
-  type: 'BOOK_SESSION';
+  type: "BOOK_SESSION";
   session: Session;
 };
 
 type CancelSessionAction = {
-  type: 'CANCEL_SESSION';
+  type: "CANCEL_SESSION";
   sessionId: string;
 };
 
 type SessionsAction = BookSessionAction | CancelSessionAction;
 
 function sessionsReducer(state: SessionState, action: SessionsAction) {
-  if (action.type === 'BOOK_SESSION') {
+  if (action.type === "BOOK_SESSION") {
     if (
       state.upcomingSessions.some((session) => session.id === action.session.id)
     ) {
@@ -55,7 +55,7 @@ function sessionsReducer(state: SessionState, action: SessionsAction) {
     };
   }
 
-  if (action.type === 'CANCEL_SESSION') {
+  if (action.type === "CANCEL_SESSION") {
     return {
       upcomingSessions: state.upcomingSessions.filter(
         (session) => session.id !== action.sessionId
@@ -66,17 +66,21 @@ function sessionsReducer(state: SessionState, action: SessionsAction) {
   return state;
 }
 
-export const SessionsContextProvider({ children }: { children: ReactNode }) {
+export const SessionsContextProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const [sessionsState, dispatch] = useReducer(sessionsReducer, {
     upcomingSessions: [],
   });
 
   function bookSession(session: Session) {
-    dispatch({ type: 'BOOK_SESSION', session });
+    dispatch({ type: "BOOK_SESSION", session });
   }
 
   function cancelSession(sessionId: string) {
-    dispatch({ type: 'CANCEL_SESSION', sessionId });
+    dispatch({ type: "CANCEL_SESSION", sessionId });
   }
 
   const ctxValue = {
@@ -90,4 +94,4 @@ export const SessionsContextProvider({ children }: { children: ReactNode }) {
       {children}
     </SessionsContext.Provider>
   );
-}
+};

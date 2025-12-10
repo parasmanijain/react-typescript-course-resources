@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { UpcomingSessions } from "../Sessions/UpcomingSessions.jsx";
+import { Button } from "../UI/Button.jsx";
 
-import UpcomingSessions from '../Sessions/UpcomingSessions.jsx';
-import Button from '../UI/Button.jsx';
-
-export const MainHeader() {
+export const MainHeader = () => {
   const [upcomingSessionsVisible, setUpcomingSessionsVisible] = useState(false);
 
   function showUpcomingSessions() {
@@ -25,10 +24,21 @@ export const MainHeader() {
         <nav>
           <ul>
             <li>
-              <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} end>Our Mission</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                end
+              >
+                Our Mission
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/sessions" className={({ isActive }) => isActive ? 'active' : ''}>Browse Sessions</NavLink>
+              <NavLink
+                to="/sessions"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Browse Sessions
+              </NavLink>
             </li>
             <li>
               <Button onClick={showUpcomingSessions}>Upcoming Sessions</Button>
@@ -38,4 +48,4 @@ export const MainHeader() {
       </header>
     </>
   );
-}
+};

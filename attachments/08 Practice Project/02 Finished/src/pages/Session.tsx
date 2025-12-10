@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { SESSIONS } from "../dummy-sessions.ts";
+import { Button } from "../components/UI/Button.tsx";
+import { BookSession } from "../components/Sessions/BookSession.tsx";
 
-import { SESSIONS } from '../dummy-sessions.ts';
-import Button from '../components/UI/Button.tsx';
-import BookSession from '../components/Sessions/BookSession.tsx';
-
-export const SessionPage() {
+export const SessionPage = () => {
   const params = useParams<{ id: string }>();
   const [isBooking, setIsBooking] = useState(false);
 
@@ -35,17 +34,14 @@ export const SessionPage() {
       )}
       <article>
         <header>
-          <img
-            src={loadedSession.image}
-            alt={loadedSession.title}
-          />
+          <img src={loadedSession.image} alt={loadedSession.title} />
           <div>
             <h2>{loadedSession.title}</h2>
             <time dateTime={new Date(loadedSession.date).toISOString()}>
-              {new Date(loadedSession.date).toLocaleDateString('en-US', {
-                day: 'numeric',
-                month: 'short',
-                year: 'numeric',
+              {new Date(loadedSession.date).toLocaleDateString("en-US", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
               })}
             </time>
             <p>
@@ -57,4 +53,4 @@ export const SessionPage() {
       </article>
     </main>
   );
-}
+};
