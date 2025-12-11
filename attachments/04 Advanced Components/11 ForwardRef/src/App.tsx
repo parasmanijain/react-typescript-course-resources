@@ -1,5 +1,4 @@
 import { useRef } from "react";
-
 import { Input } from "./components/Input.tsx";
 
 export const App = () => {
