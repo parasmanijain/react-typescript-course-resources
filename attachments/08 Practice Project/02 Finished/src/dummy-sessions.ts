@@ -1,4 +1,4 @@
-import kickstartReact from "./assets/sessions/kickstart.jpg";
+import kickstartReact from "./assets/sessions/kickstart-react.jpg";
 import debugCode from "./assets/sessions/debug-code.jpg";
 import blueprintComponent from "./assets/sessions/blueprint-component.jpg";
 import stateMgmtFlow from "./assets/sessions/state-mgmt-flow.jpg";
