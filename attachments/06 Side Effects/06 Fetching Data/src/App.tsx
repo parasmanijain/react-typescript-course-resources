@@ -11,17 +11,17 @@ const rawDataBlogPostSchema = z.object({
   body: z.string(),
 });
 
-const expectedResponseDataSchema = z.array(rawDataBlogPostSchema);
-
 export const App = () => {
   const [fetchedPosts, setFetchedPosts] = useState<BlogPost[]>();
 
   useEffect(() => {
     async function fetchPosts() {
-      const data = await get("https://jsonplaceholder.typicode.com/posts");
-      const parsedData = expectedResponseDataSchema.parse(data);
+      const data = await get(
+        "https://jsonplaceholder.typicode.com/posts",
+        z.array(rawDataBlogPostSchema)
+      );
 
-      const blogPosts: BlogPost[] = parsedData.map((rawPost) => {
+      const blogPosts: BlogPost[] = data.map((rawPost) => {
         return {
           id: rawPost.id,
           title: rawPost.title,
